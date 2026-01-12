@@ -5,13 +5,16 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Calender {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\user\\Automation_selenium\\chromedriver-win64\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver",
+				//"C:\\Users\\user\\Automation_selenium\\chromedriver-win64\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/angularpractice/");
